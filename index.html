@@ -1,55 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="mystyles.css">
+  <meta charset="UTF-8" />
+  <title>Brisa Sofia Martinez | CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="mystyles.css" />
 </head>
+<body data-theme="dark" data-lang="en">
+  <div class="page-shell">
+    
+    <header class="site-header">
+      <div class="logo">BM</div>
 
-<body>
-    <div class="cv">
-        <div class="barra-izq">
-            iconos
-        </div>
-        <div class="contendor-principal">
-            <div class="cv-header">
-                <h1>Brisa Sofia Martinez Zaragoza</h1>
-                <h2>ingeniero en sistemas y seguridad informatica</h2>
-            </div>
-            <div class="cv-perfil">
-                <h1>Perfil</h1>
-                <h2>texto</h2>
-            </div>
-            <div class="experiencia">
-                <h1>Experiencia</h1>
-            </div>
-            <div class="formacion-academica">
-                <h1>Formación académica</h1>
-            </div>
-            <div class="tools">
-                <h1>herramientas y tecnologias</h1>
-            </div>
-            <div class="certificaciones">
-                <div class="columna-izq">
-                    <div class="idiomas">
-                        <h1>Idiomas</h1>
-                    </div>
-                    <div class="contacto">
-                        <h1>contacto</h1>
-                    </div>
-                </div>
-                <div class="columna-rigth">
-                    <div class="habilidades">
-                        <h1>Habilidades</h1>
-                    </div>
-                </div>
-            </div>
+      <nav class="nav">
+        <a href="#about" data-i18n-key="nav.about">About</a>
+        <a href="#experience" data-i18n-key="nav.experience">Experience</a>
+        <a href="#projects" data-i18n-key="nav.projects">Academic Projects</a>
+        <a href="#skills" data-i18n-key="nav.skills">Skills</a>
+        <a href="#contact" data-i18n-key="nav.contact">Contact</a>
+      </nav>
 
-        </div>
+     
+      <div class="header-controls">
         
-    </div>
-</body>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <span class="theme-toggle-icon">🌙</span>
+          <span class="theme-toggle-label" data-i18n-key="theme.label.dark">Dark mode</span>
+        </button>
 
+        
+        <button class="lang-toggle" type="button" data-lang-toggle>
+          <span class="lang-toggle-icon">🌐</span>
+          <span class="lang-toggle-label">EN</span>
+        </button>
+      </div>
+    </header>
+
+    
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <p class="hero-kicker" data-i18n-key="hero.kicker">
+            Senior System Engineering Student & IT Intern
+          </p>
+          <h1 class="hero-title" data-i18n-key="hero.title">
+            Hi, I am Brisa Sofia.
+          </h1>
+          <p class="hero-subtitle" data-i18n-key="hero.subtitle">
+            Senior System Engineering student seeking an internship position to apply academic
+            knowledge in real-world environments and gain practical experience in system design,
+            implementation, and troubleshooting.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" data-i18n-key="hero.btn.projects">
+              View projects
+            </a>
+            <a href="#contact" class="btn btn-outline" data-i18n-key="hero.btn.contact">
+              Contact me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar">
+          <div class="avatar-frame">
+           
+            <img src="images/Brisa.jpeg" alt="Photo of Brisa Sofia Martinez" />
+          </div>
+          <p class="hero-location" data-i18n-key="hero.location">
+            Based in Woodstock, IL · Fluent in Spanish and English
+          </p>
+        </div>
+      </section>
+
+     
+      <section id="about" class="section section-about">
+        <div class="section-header">
+          <h2 data-i18n-key="about.title">About</h2>
+          <div class="section-rule"></div>
+        </div>
+        <p data-i18n-key="about.text">
+          I am a System Engineering student at Universidad Vasco de Quiroga in Morelia, Mexico (2022–2026).
+          I enjoy combining technology, organization, and teamwork to solve real problems. My experience
+          includes leadership roles in student organizations, teaching basic programming, and supporting
+          IT operations in a professional environment.
+        </p>
+      </section>
+
+   
+      <section class="section section-edu">
+        <div class="section-header">
+          <h2 data-i18n-key="edu.title">Education</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3 data-i18n-key="edu.card.title">
+              Bachelor of Science in System Engineering
+            </h3>
+            <p class="card-meta" data-i18n-key="edu.card.meta">
+              2022 – 2026 · Universidad Vasco de Quiroga, Morelia, MICH, MX
+            </p>
+            <p data-i18n-key="edu.card.text">
+              Coursework focused on programming, algorithms, systems design, and engineering fundamentals,
+              complemented by leadership activities and academic projects.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-grid">
+        <div class="section-header">
+          <h2 data-i18n-key="exp.title">Experience</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3 data-i18n-key="exp.it.title">IT Intern</h3>
+            <p class="card-meta" data-i18n-key="exp.it.meta">
+              Midwest Groundcovers LLC · Saint Charles, IL · June 2025 – Present
+            </p>
+            <ul class="card-list">
+              <li data-i18n-key="exp.it.li1">
+                Develop and maintain automated label templates using BarTender and Microsoft Business Central.
+              </li>
+              <li data-i18n-key="exp.it.li2">
+                Troubleshoot printer, software, and data-flow issues, providing timely remote support.
+              </li>
+              <li data-i18n-key="exp.it.li3">
+                Assist in improving automation workflows for label generation and system integration.
+              </li>
+              <li data-i18n-key="exp.it.li4">
+                Organize and document technical data, templates, and internal processes.
+              </li>
+              <li data-i18n-key="exp.it.li5">
+                Support general IT operations, including diagnostics, user assistance, and system updates.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n-key="exp.esporta.title">
+              Membership Services Representative
+            </h3>
+            <p class="card-meta" data-i18n-key="exp.esporta.meta">
+              Esporta Fitness · Brandon, FL · Apr. 2021 – Aug. 2021
+            </p>
+            <ul class="card-list">
+              <li data-i18n-key="exp.esporta.li1">
+                Proactively contacted members to update payment information and ensure uninterrupted access.
+              </li>
+              <li data-i18n-key="exp.esporta.li2">
+                Effectively sold memberships to both English and Spanish-speaking clients.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+    
+      <section class="section section-grid">
+        <div class="section-header">
+          <h2 data-i18n-key="lead.title">Leadership</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3 data-i18n-key="lead.arduino.title">
+              Volunteer · Local High School Arduino Workshop
+            </h3>
+            <p class="card-meta" data-i18n-key="lead.arduino.meta">
+              Prepa UVAQ · Morelia, MICH, MX · Feb. 2024 – May 2024
+            </p>
+            <ul class="card-list">
+              <li data-i18n-key="lead.arduino.li1">
+                Guided basic concepts of Arduino programming to high school students.
+              </li>
+              <li data-i18n-key="lead.arduino.li2">
+                Facilitated hands-on learning activities to enhance understanding.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n-key="lead.council.title">
+              Treasurer · Student Council
+            </h3>
+            <p class="card-meta" data-i18n-key="lead.council.meta">
+              Engineering Department · Aug. 2023 – Present
+            </p>
+            <ul class="card-list">
+              <li data-i18n-key="lead.council.li1">
+                Increased yearly funding by over 3000% in 2024.
+              </li>
+              <li data-i18n-key="lead.council.li2">
+                Managed finances, including budgeting and expense tracking for the Student Council.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n-key="lead.ieee.title">
+              Treasurer · IEEE Association
+            </h3>
+            <p class="card-meta" data-i18n-key="lead.ieee.meta">
+              Universidad Vasco de Quiroga · Aug. 2022 – Present
+            </p>
+            <ul class="card-list">
+              <li data-i18n-key="lead.ieee.li1">
+                Increased yearly funding by 80% in 2023.
+              </li>
+              <li data-i18n-key="lead.ieee.li2">
+                Secured scholarships for 4 students to attend IEEE SBRM R9.
+              </li>
+              <li data-i18n-key="lead.ieee.li3">
+                Coordinated trips to conferences such as IEEE SBRM R9 (Colombia) and IEEE ROPEC (Ixtapa, Mexico).
+              </li>
+              <li data-i18n-key="lead.ieee.li4">
+                Managed finances and collaborated with the executive team on events and workshops.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+     
+      <section id="projects" class="section section-grid">
+        <div class="section-header">
+          <h2 data-i18n-key="proj.title">Academic Projects</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3 data-i18n-key="proj.vet.title">Vet Clinic Management System</h3>
+            <p class="card-meta" data-i18n-key="proj.vet.meta">
+              Object-Oriented Programming · Fall 2023
+            </p>
+            <p data-i18n-key="proj.vet.text">
+              Developed a Java-based system with a graphical interface to maintain patient data.
+              Implemented features for record-keeping, appointment scheduling, and client management.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n-key="proj.alg.title">Basic Algorithms Course</h3>
+            <p class="card-meta" data-i18n-key="proj.alg.meta">
+              IEEE Association · Fall 2023
+            </p>
+            <p data-i18n-key="proj.alg.text">
+              Designed a 6-week course on the fundamentals of algorithms with programming and
+              collaborated with a programming professor to create course materials and curriculum.
+            </p>
+          </article>
+        </div>
+      </section>
+
+     
+      <section id="skills" class="section section-skills">
+        <div class="section-header">
+          <h2 data-i18n-key="skills.title">Skills</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="skills-columns">
+          <div>
+            <h3 data-i18n-key="skills.tech.title">Technical</h3>
+            <ul class="pill-list">
+              <li>Java</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SolidWorks</li>
+              <li>Microsoft Office Suite</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n-key="skills.soft.title">Languages & Soft Skills</h3>
+            <ul class="pill-list">
+              <li data-i18n-key="skills.soft.l1">Fluent in Spanish</li>
+              <li data-i18n-key="skills.soft.l2">Fluent in English</li>
+              <li data-i18n-key="skills.soft.l3">Teamwork</li>
+              <li data-i18n-key="skills.soft.l4">Communication</li>
+              <li data-i18n-key="skills.soft.l5">Organization</li>
+              <li data-i18n-key="skills.soft.l6">Problem solving</li>
+              <li data-i18n-key="skills.soft.l7">Adaptability</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+     
+      <section id="contact" class="section section-contact">
+        <div class="section-header">
+          <h2 data-i18n-key="contact.title">Contact</h2>
+          <div class="section-rule"></div>
+        </div>
+
+        <p class="contact-text" data-i18n-key="contact.text">
+          If you would like to collaborate, discuss an opportunity, or know more about my work,
+          feel free to reach out.
+        </p>
+
+        <div class="contact-actions">
+          <a href="mailto:martinez.brisa22@gmail.com" class="btn btn-primary" data-i18n-key="contact.btn.email">
+            Email me
+          </a>
+          <a href="tel:+17797133154" class="btn btn-outline" data-i18n-key="contact.btn.call">
+            Call or text
+          </a>
+        </div>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <p data-i18n-key="footer.text">
+        © 2025 Brisa Sofia Martinez · Built with a touch of ocean & spring
+      </p>
+    </footer>
+  </div>
+
+  
+  <script>
+    (function () {
+      const body = document.body;
+      const root = document.documentElement;
+
+      const themeToggle = document.querySelector("[data-theme-toggle]");
+      const themeIcon = themeToggle.querySelector(".theme-toggle-icon");
+      const themeLabel = themeToggle.querySelector(".theme-toggle-label");
+
+      const langToggle = document.querySelector("[data-lang-toggle]");
+      const langLabel = langToggle.querySelector(".lang-toggle-label");
+
+      const i18nElems = document.querySelectorAll("[data-i18n-key]");
+
+      const translations = {
+        en: {
+          "theme.label.dark": "Dark mode",
+          "theme.label.light": "Light mode",
+
+          "nav.about": "About",
+          "nav.experience": "Experience",
+          "nav.projects": "Academic Projects",
+          "nav.skills": "Skills",
+          "nav.contact": "Contact",
+
+          "hero.kicker": "Senior System Engineering Student & IT Intern",
+          "hero.title": "Hi, I am Brisa Sofia.",
+          "hero.subtitle":
+            "Senior System Engineering student seeking an internship position to apply academic knowledge in real-world environments and gain practical experience in system design, implementation, and troubleshooting.",
+          "hero.btn.projects": "View projects",
+          "hero.btn.contact": "Contact me",
+          "hero.location": "Based in Woodstock, IL · Fluent in Spanish and English",
+
+          "about.title": "About",
+          "about.text":
+            "I am a System Engineering student at Universidad Vasco de Quiroga in Morelia, Mexico (2022–2026). I enjoy combining technology, organization, and teamwork to solve real problems. My experience includes leadership roles in student organizations, teaching basic programming, and supporting IT operations in a professional environment.",
+
+          "edu.title": "Education",
+          "edu.card.title": "Bachelor of Science in System Engineering",
+          "edu.card.meta": "2022 – 2026 · Universidad Vasco de Quiroga, Morelia, MICH, MX",
+          "edu.card.text":
+            "Coursework focused on programming, algorithms, systems design, and engineering fundamentals, complemented by leadership activities and academic projects.",
+
+          "exp.title": "Experience",
+          "exp.it.title": "IT Intern",
+          "exp.it.meta": "Midwest Groundcovers LLC · Saint Charles, IL · June 2025 – Present",
+          "exp.it.li1":
+            "Develop and maintain automated label templates using BarTender and Microsoft Business Central.",
+          "exp.it.li2":
+            "Troubleshoot printer, software, and data-flow issues, providing timely remote support.",
+          "exp.it.li3":
+            "Assist in improving automation workflows for label generation and system integration.",
+          "exp.it.li4":
+            "Organize and document technical data, templates, and internal processes.",
+          "exp.it.li5":
+            "Support general IT operations, including diagnostics, user assistance, and system updates.",
+
+          "exp.esporta.title": "Membership Services Representative",
+          "exp.esporta.meta": "Esporta Fitness · Brandon, FL · Apr. 2021 – Aug. 2021",
+          "exp.esporta.li1":
+            "Proactively contacted members to update payment information and ensure uninterrupted access.",
+          "exp.esporta.li2":
+            "Effectively sold memberships to both English and Spanish-speaking clients.",
+
+          "lead.title": "Leadership",
+          "lead.arduino.title": "Volunteer · Local High School Arduino Workshop",
+          "lead.arduino.meta": "Prepa UVAQ · Morelia, MICH, MX · Feb. 2024 – May 2024",
+          "lead.arduino.li1":
+            "Guided basic concepts of Arduino programming to high school students.",
+          "lead.arduino.li2":
+            "Facilitated hands-on learning activities to enhance understanding.",
+
+          "lead.council.title": "Treasurer · Student Council",
+          "lead.council.meta": "Engineering Department · Aug. 2023 – Present",
+          "lead.council.li1": "Increased yearly funding by over 3000% in 2024.",
+          "lead.council.li2":
+            "Managed finances, including budgeting and expense tracking for the Student Council.",
+
+          "lead.ieee.title": "Treasurer · IEEE Association",
+          "lead.ieee.meta": "Universidad Vasco de Quiroga · Aug. 2022 – Present",
+          "lead.ieee.li1": "Increased yearly funding by 80% in 2023.",
+          "lead.ieee.li2":
+            "Secured scholarships for 4 students to attend IEEE SBRM R9.",
+          "lead.ieee.li3":
+            "Coordinated trips to conferences such as IEEE SBRM R9 (Colombia) and IEEE ROPEC (Ixtapa, Mexico).",
+          "lead.ieee.li4":
+            "Managed finances and collaborated with the executive team on events and workshops.",
+
+          "proj.title": "Academic Projects",
+          "proj.vet.title": "Vet Clinic Management System",
+          "proj.vet.meta": "Object-Oriented Programming · Fall 2023",
+          "proj.vet.text":
+            "Developed a Java-based system with a graphical interface to maintain patient data. Implemented features for record-keeping, appointment scheduling, and client management.",
+          "proj.alg.title": "Basic Algorithms Course",
+          "proj.alg.meta": "IEEE Association · Fall 2023",
+          "proj.alg.text":
+            "Designed a 6-week course on the fundamentals of algorithms with programming and collaborated with a programming professor to create course materials and curriculum.",
+
+          "skills.title": "Skills",
+          "skills.tech.title": "Technical",
+          "skills.soft.title": "Languages & Soft Skills",
+          "skills.soft.l1": "Fluent in Spanish",
+          "skills.soft.l2": "Fluent in English",
+          "skills.soft.l3": "Teamwork",
+          "skills.soft.l4": "Communication",
+          "skills.soft.l5": "Organization",
+          "skills.soft.l6": "Problem solving",
+          "skills.soft.l7": "Adaptability",
+
+          "contact.title": "Contact",
+          "contact.text":
+            "If you would like to collaborate, discuss an opportunity, or know more about my work, feel free to reach out.",
+          "contact.btn.email": "Email me",
+          "contact.btn.call": "Call or text",
+
+          "footer.text": "© 2025 Brisa Sofia Martinez · Built with a touch of ocean & spring",
+        },
+
+        es: {
+          "theme.label.dark": "Modo oscuro",
+          "theme.label.light": "Modo claro",
+
+          "nav.about": "Sobre mí",
+          "nav.experience": "Experiencia",
+          "nav.projects": "Proyectos académicos",
+          "nav.skills": "Habilidades",
+          "nav.contact": "Contacto",
+
+          "hero.kicker": "Estudiante de Ingeniería en Sistemas & IT Intern",
+          "hero.title": "Hola, soy Brisa Sofía.",
+          "hero.subtitle":
+            "Estudiante de Ingeniería en Sistemas que busca aplicar sus conocimientos en entornos reales y ganar experiencia práctica en diseño, implementación y solución de problemas en sistemas.",
+          "hero.btn.projects": "Ver proyectos",
+          "hero.btn.contact": "Contáctame",
+          "hero.location": "Radicada en Woodstock, IL · Fluida en español e inglés",
+
+          "about.title": "Sobre mí",
+          "about.text":
+            "Soy estudiante de Ingeniería en Sistemas en la Universidad Vasco de Quiroga en Morelia, México (2022–2026). Me gusta combinar tecnología, organización y trabajo en equipo para resolver problemas reales. Tengo experiencia en liderazgo estudiantil, enseñanza de programación básica y apoyo en operaciones de TI en un entorno profesional.",
+
+          "edu.title": "Educación",
+          "edu.card.title": "Licenciatura en Ingeniería en Sistemas",
+          "edu.card.meta": "2022 – 2026 · Universidad Vasco de Quiroga, Morelia, MICH, MX",
+          "edu.card.text":
+            "Formación enfocada en programación, algoritmos, diseño de sistemas y fundamentos de ingeniería, complementada con actividades de liderazgo y proyectos académicos.",
+
+          "exp.title": "Experiencia",
+          "exp.it.title": "IT Intern",
+          "exp.it.meta":
+            "Midwest Groundcovers LLC · Saint Charles, IL · Junio 2025 – Actualidad",
+          "exp.it.li1":
+            "Desarrollo y mantenimiento de plantillas de etiquetas automatizadas utilizando BarTender y Microsoft Business Central.",
+          "exp.it.li2":
+            "Solución de problemas de impresoras, software y flujo de datos, brindando soporte remoto oportuno.",
+          "exp.it.li3":
+            "Apoyo en la mejora de flujos de automatización para la generación de etiquetas e integración de sistemas.",
+          "exp.it.li4":
+            "Organización y documentación de datos técnicos, plantillas y procesos internos.",
+          "exp.it.li5":
+            "Soporte general de TI, incluyendo diagnósticos, asistencia a usuarios y actualizaciones de sistema.",
+
+          "exp.esporta.title": "Membership Services Representative",
+          "exp.esporta.meta": "Esporta Fitness · Brandon, FL · Abr. 2021 – Ago. 2021",
+          "exp.esporta.li1":
+            "Contacto proactivo con miembros para actualizar información de pago y asegurar el acceso continuo a las instalaciones.",
+          "exp.esporta.li2":
+            "Venta efectiva de membresías a clientes de habla inglesa y española.",
+
+          "lead.title": "Liderazgo",
+          "lead.arduino.title": "Voluntaria · Taller de Arduino para preparatoria",
+          "lead.arduino.meta": "Prepa UVAQ · Morelia, MICH, MX · Feb. 2024 – May. 2024",
+          "lead.arduino.li1":
+            "Guía de conceptos básicos de programación con Arduino para estudiantes de preparatoria.",
+          "lead.arduino.li2":
+            "Facilitación de actividades prácticas para reforzar la comprensión de los temas.",
+
+          "lead.council.title": "Tesorera · Consejo Estudiantil",
+          "lead.council.meta": "Departamento de Ingeniería · Ago. 2023 – Actualidad",
+          "lead.council.li1":
+            "Incremento del financiamiento anual en más de un 3000% en 2024.",
+          "lead.council.li2":
+            "Gestión de finanzas, incluyendo presupuestos y control de gastos para el Consejo Estudiantil.",
+
+          "lead.ieee.title": "Tesorera · Asociación IEEE",
+          "lead.ieee.meta": "Universidad Vasco de Quiroga · Ago. 2022 – Actualidad",
+          "lead.ieee.li1": "Aumento del financiamiento anual en un 80% en 2023.",
+          "lead.ieee.li2":
+            "Gestión de becas para 4 estudiantes que asistieron al IEEE SBRM R9.",
+          "lead.ieee.li3":
+            "Coordinación de viajes a conferencias como IEEE SBRM R9 (Colombia) y IEEE ROPEC (Ixtapa, México).",
+          "lead.ieee.li4":
+            "Administración de finanzas y colaboración con el equipo ejecutivo en eventos y talleres.",
+
+          "proj.title": "Proyectos académicos",
+          "proj.vet.title": "Sistema de Gestión de Clínica Veterinaria",
+          "proj.vet.meta": "Programación Orientada a Objetos · Otoño 2023",
+          "proj.vet.text":
+            "Desarrollo de un sistema en Java con interfaz gráfica para mantener datos de pacientes. Incluye funciones para registro, agenda de citas y gestión de clientes.",
+          "proj.alg.title": "Curso de Algoritmos Básicos",
+          "proj.alg.meta": "Asociación IEEE · Otoño 2023",
+          "proj.alg.text":
+            "Diseño de un curso de 6 semanas sobre fundamentos de algoritmos con programación y colaboración con un profesor para crear materiales y plan de estudios.",
+
+          "skills.title": "Habilidades",
+          "skills.tech.title": "Técnicas",
+          "skills.soft.title": "Idiomas & Habilidades Blandas",
+          "skills.soft.l1": "Fluida en español",
+          "skills.soft.l2": "Fluida en inglés",
+          "skills.soft.l3": "Trabajo en equipo",
+          "skills.soft.l4": "Comunicación",
+          "skills.soft.l5": "Organización",
+          "skills.soft.l6": "Resolución de problemas",
+          "skills.soft.l7": "Adaptabilidad",
+
+          "contact.title": "Contacto",
+          "contact.text":
+            "Si te interesa colaborar, platicar sobre una oportunidad o conocer más sobre mi trabajo, no dudes en contactarme.",
+          "contact.btn.email": "Enviarme un correo",
+          "contact.btn.call": "Llamar o enviar mensaje",
+
+          "footer.text": "© 2025 Brisa Sofia Martinez · Hecho con un toque de océano y primavera",
+        },
+      };
+
+    
+      function applyTranslations(lang) {
+        i18nElems.forEach((el) => {
+          const key = el.dataset.i18nKey;
+          const t = translations[lang] && translations[lang][key];
+          if (t) el.textContent = t;
+        });
+      }
+
+      function updateThemeToggleUI(currentLang) {
+        const theme = body.dataset.theme === "light" ? "light" : "dark";
+        if (theme === "light") {
+          themeIcon.textContent = "☀️";
+          themeLabel.textContent = translations[currentLang]["theme.label.light"];
+        } else {
+          themeIcon.textContent = "🌙";
+          themeLabel.textContent = translations[currentLang]["theme.label.dark"];
+        }
+      }
+
+      function updateLangToggleUI(currentLang) {
+        langLabel.textContent = currentLang === "en" ? "EN" : "ES";
+      }
+
+     
+      let currentLang = localStorage.getItem("lang") || "en";
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "light" || savedTheme === "dark") {
+        body.dataset.theme = savedTheme;
+      }
+
+      body.dataset.lang = currentLang;
+      root.lang = currentLang;
+      applyTranslations(currentLang);
+      updateThemeToggleUI(currentLang);
+      updateLangToggleUI(currentLang);
+
+      
+      themeToggle.addEventListener("click", () => {
+        const next = body.dataset.theme === "light" ? "dark" : "light";
+        body.dataset.theme = next;
+        localStorage.setItem("theme", next);
+        updateThemeToggleUI(currentLang);
+      });
+
+      langToggle.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "es" : "en";
+        body.dataset.lang = currentLang;
+        root.lang = currentLang;
+        localStorage.setItem("lang", currentLang);
+        applyTranslations(currentLang);
+        updateThemeToggleUI(currentLang);
+        updateLangToggleUI(currentLang);
+      });
+    })();
+  </script>
+</body>
 </html>
