@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="mystyles.css" />
 </head>
-<body data-theme="dark" data-lang="en">
+<body data-theme="dark" data-lang="en" class="is-loading">
+  
+  <div id="preloader" class="preloader" aria-live="polite" aria-busy="true">
+    <div class="preloader-inner">
+      <div class="spinner" aria-hidden="true"></div>
+      <p class="preloader-text" data-i18n-key="preloader.text">Loading your resume…</p>
+    </div>
+  </div>
+
   <div class="page-shell">
-    
     <header class="site-header">
       <div class="logo">BM</div>
 
-      <nav class="nav">
+      
+      <nav class="nav" aria-label="Primary">
         <a href="#about" data-i18n-key="nav.about">About</a>
         <a href="#experience" data-i18n-key="nav.experience">Experience</a>
         <a href="#projects" data-i18n-key="nav.projects">Academic Projects</a>
@@ -20,12 +28,22 @@
         <a href="#contact" data-i18n-key="nav.contact">Contact</a>
       </nav>
 
-     
       <div class="header-controls">
+        
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+          ☰
+        </button>
+
         
         <button class="theme-toggle" type="button" data-theme-toggle>
           <span class="theme-toggle-icon">🌙</span>
           <span class="theme-toggle-label" data-i18n-key="theme.label.dark">Dark mode</span>
+        </button>
+
+        
+        <button class="download-toggle" type="button" data-download-resume>
+          <span class="download-toggle-icon">📄</span>
+          <span class="download-toggle-label" data-i18n-key="resume.download">Download CV</span>
         </button>
 
         
@@ -37,9 +55,17 @@
     </header>
 
     
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+      <a href="#about" data-i18n-key="nav.about">About</a>
+      <a href="#experience" data-i18n-key="nav.experience">Experience</a>
+      <a href="#projects" data-i18n-key="nav.projects">Academic Projects</a>
+      <a href="#skills" data-i18n-key="nav.skills">Skills</a>
+      <a href="#contact" data-i18n-key="nav.contact">Contact</a>
+    </nav>
+
     <main>
       <section class="hero">
-        <div class="hero-text">
+        <div class="hero-text" data-animate>
           <p class="hero-kicker" data-i18n-key="hero.kicker">
             Senior System Engineering Student & IT Intern
           </p>
@@ -59,20 +85,18 @@
               Contact me
             </a>
           </div>
-        </div>
-
-        <div class="hero-avatar">
-          <div class="avatar-frame">
-           
-            <img src="images/Brisa.jpeg" alt="Photo of Brisa Sofia Martinez" />
-          </div>
           <p class="hero-location" data-i18n-key="hero.location">
             Based in Woodstock, IL · Fluent in Spanish and English
           </p>
         </div>
+
+        <div class="hero-avatar">
+          <div class="avatar-frame">
+            <img src="images/Brisa.jpeg" alt="Photo of Brisa Sofia Martinez" />
+          </div>
+        </div>
       </section>
 
-     
       <section id="about" class="section section-about">
         <div class="section-header">
           <h2 data-i18n-key="about.title">About</h2>
@@ -86,7 +110,6 @@
         </p>
       </section>
 
-   
       <section class="section section-edu">
         <div class="section-header">
           <h2 data-i18n-key="edu.title">Education</h2>
@@ -159,7 +182,6 @@
         </div>
       </section>
 
-    
       <section class="section section-grid">
         <div class="section-header">
           <h2 data-i18n-key="lead.title">Leadership</h2>
@@ -226,7 +248,6 @@
         </div>
       </section>
 
-     
       <section id="projects" class="section section-grid">
         <div class="section-header">
           <h2 data-i18n-key="proj.title">Academic Projects</h2>
@@ -258,7 +279,6 @@
         </div>
       </section>
 
-     
       <section id="skills" class="section section-skills">
         <div class="section-header">
           <h2 data-i18n-key="skills.title">Skills</h2>
@@ -293,7 +313,6 @@
         </div>
       </section>
 
-     
       <section id="contact" class="section section-contact">
         <div class="section-header">
           <h2 data-i18n-key="contact.title">Contact</h2>
@@ -316,15 +335,11 @@
       </section>
     </main>
 
-    
     <footer class="site-footer">
-      <p data-i18n-key="footer.text">
-        © 2025 Brisa Sofia Martinez · Built with a touch of ocean & spring
-      </p>
+      <p data-i18n-key="footer.text">© 2025 Brisa Sofia Martinez · Built with a touch of ocean & spring</p>
     </footer>
   </div>
 
-  
   <script>
     (function () {
       const body = document.body;
@@ -337,10 +352,21 @@
       const langToggle = document.querySelector("[data-lang-toggle]");
       const langLabel = langToggle.querySelector(".lang-toggle-label");
 
+      const navToggle = document.querySelector("[data-nav-toggle]");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      const downloadBtn = document.querySelector("[data-download-resume]");
       const i18nElems = document.querySelectorAll("[data-i18n-key]");
+
+      const RESUME_PATH = "assets/BrisaResume-Woodstock.pdf";
+      const RESUME_FILENAME = "BrisaResume-Woodstock.pdf";
 
       const translations = {
         en: {
+          "preloader.text": "Loading your resume…",
+
+          "resume.download": "Download CV",
+
           "theme.label.dark": "Dark mode",
           "theme.label.light": "Light mode",
 
@@ -444,6 +470,10 @@
         },
 
         es: {
+          "preloader.text": "Cargando tu CV…",
+
+          "resume.download": "Descargar CV",
+
           "theme.label.dark": "Modo oscuro",
           "theme.label.light": "Modo claro",
 
@@ -523,6 +553,7 @@
           "proj.vet.meta": "Programación Orientada a Objetos · Otoño 2023",
           "proj.vet.text":
             "Desarrollo de un sistema en Java con interfaz gráfica para mantener datos de pacientes. Incluye funciones para registro, agenda de citas y gestión de clientes.",
+
           "proj.alg.title": "Curso de Algoritmos Básicos",
           "proj.alg.meta": "Asociación IEEE · Otoño 2023",
           "proj.alg.text":
@@ -549,7 +580,6 @@
         },
       };
 
-    
       function applyTranslations(lang) {
         i18nElems.forEach((el) => {
           const key = el.dataset.i18nKey;
@@ -573,13 +603,10 @@
         langLabel.textContent = currentLang === "en" ? "EN" : "ES";
       }
 
-     
+      
       let currentLang = localStorage.getItem("lang") || "en";
       const savedTheme = localStorage.getItem("theme");
-
-      if (savedTheme === "light" || savedTheme === "dark") {
-        body.dataset.theme = savedTheme;
-      }
+      if (savedTheme === "light" || savedTheme === "dark") body.dataset.theme = savedTheme;
 
       body.dataset.lang = currentLang;
       root.lang = currentLang;
@@ -595,6 +622,7 @@
         updateThemeToggleUI(currentLang);
       });
 
+      
       langToggle.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "es" : "en";
         body.dataset.lang = currentLang;
@@ -603,6 +631,61 @@
         applyTranslations(currentLang);
         updateThemeToggleUI(currentLang);
         updateLangToggleUI(currentLang);
+      });
+
+      
+      if (navToggle && mobileNav) {
+        navToggle.addEventListener("click", () => {
+          const open = document.body.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        mobileNav.querySelectorAll("a").forEach((a) =>
+          a.addEventListener("click", () => {
+            document.body.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          })
+        );
+      }
+
+      
+      if (downloadBtn) {
+        downloadBtn.addEventListener("click", () => {
+          const a = document.createElement("a");
+          a.href = RESUME_PATH;
+          a.setAttribute("download", RESUME_FILENAME);
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        });
+      }
+
+      
+      const heroText = document.querySelector(".hero-text[data-animate]");
+      if (heroText) {
+        const parts = [
+          heroText.querySelector(".hero-kicker"),
+          heroText.querySelector(".hero-title"),
+          heroText.querySelector(".hero-subtitle"),
+          heroText.querySelector(".hero-actions"),
+          heroText.querySelector(".hero-location"),
+        ].filter(Boolean);
+
+        parts.forEach((el, i) => {
+          el.classList.add("reveal");
+          el.style.setProperty("--reveal-delay", `${150 + i * 120}ms`);
+        });
+      }
+
+      
+      const preloader = document.getElementById("preloader");
+      window.addEventListener("load", () => {
+        preloader.classList.add("preloader--hide");
+        preloader.addEventListener("transitionend", () => {
+          preloader.remove();
+          body.classList.remove("is-loading");
+          body.classList.add("is-ready");
+          document.querySelectorAll(".reveal").forEach((el) => el.classList.add("reveal--in"));
+        }, { once: true });
       });
     })();
   </script>
